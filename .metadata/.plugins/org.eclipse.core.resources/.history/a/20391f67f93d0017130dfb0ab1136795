@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package com.doj.springapp.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+import com.doj.springapp.repository.AppDataSource;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+@Configuration
+@PropertySource("app.properties")//PropertySourcesPlaceholderConfigurer working behind
+public class InfrastructureConfig {
+ //have infrastructure related beans like DataSource, JNDI, etc.
+	
+	@Value("${dburl}") 		String dburl;
+	@Value("${user}") 		String user;
+	@Value("${password}") 	String password;
+	@Value("${driver}") 	String driver;
+	
+	/*@Autowired
+	public Environment env;
+	
+	@Bean
+	public AppDataSource dataSource(){
+		AppDataSource appDataSource = new AppDataSource();
+		appDataSource.setDburl(env.getProperty("dburl"));
+		appDataSource.setDriver(env.getProperty("driver"));
+		appDataSource.setPassword(env.getProperty("password"));
+		appDataSource.setUser(env.getProperty("user"));
+		return appDataSource;
+	}*/
+	
+	/*@Bean
+	public AppDataSource dataSource(
+			@Value("${dburl}") String dburl, 
+			@Value("${user}") String user, 
+			@Value("${password}") String password, 
+			@Value("${driver}") String driver){
+		AppDataSource appDataSource = new AppDataSource(dburl, user, password, driver);
+		return appDataSource;
+	}*/
+	
+	@Bean
+	public AppDataSource dataSource(){
+		AppDataSource appDataSource = new AppDataSource(dburl, user, password, driver);
+		return appDataSource;
+	}
+}

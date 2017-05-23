@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.doj.springapp.repository;
+
+import com.doj.springapp.model.Account;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+//@Repository
+public class JdbcAccountRepository implements AccountRepository{
+	
+	@Override
+	public Account findAccountById(Long id){
+		return new Account(id);
+	}
+	
+	///@PostConstruct//Done by JSR 250
+	void populateCache(){
+		System.out.println("Creating cache for application");
+	}
+}

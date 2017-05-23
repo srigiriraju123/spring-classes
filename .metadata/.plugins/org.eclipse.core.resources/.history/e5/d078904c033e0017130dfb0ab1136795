@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.doj.springapp.repository;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.stereotype.Repository;
+
+import com.doj.springapp.model.Account;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+@Repository
+public class JdbcAccountRepository implements AccountRepository{
+	
+	@Override
+	public Account findAccountById(Long id){
+		return new Account(id);
+	}
+	
+	@PostConstruct//Done by JSR 250
+	void populateCache(){
+		//TODO =Making network connection
+		System.out.println("Creating cache for application");
+	}
+	
+	@PreDestroy//Done by JSR 250
+	void cleanUp(){
+		//TODO =release network connection
+		System.out.println("releasse cache date from application");
+	}
+}

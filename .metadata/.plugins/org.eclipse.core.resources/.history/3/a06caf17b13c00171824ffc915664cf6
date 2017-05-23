@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.doj.springapp.service;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+public class AccountServiceImpl {
+	
+	public void transfer(Long amount, Long a, Long b){
+		System.out.println("Amount has been transfered");
+	}
+}

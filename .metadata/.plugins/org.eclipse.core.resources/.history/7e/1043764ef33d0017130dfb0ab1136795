@@ -1,0 +1,17 @@
+package com.doj.springapp.repository;
+
+import org.springframework.stereotype.Repository;
+
+import com.doj.springapp.model.Account;
+
+@Repository
+public class JpaAccountRepository implements AccountRepository {
+	
+	AppDataSource dataSource;
+
+	@Override
+	public Account findAccountById(Long id) {
+		return new Account(id);
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.doj.springapp.repository;
+
+import com.doj.springapp.model.Account;
+
+public class JpaAccountRepository implements AccountRepository {
+
+	@Override
+	public Account findAccountById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

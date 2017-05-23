@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.doj.app.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Scope;
+
+import com.doj.app.repository.AccountRepository;
+import com.doj.app.repository.IAccountRepository;
+import com.doj.app.service.TransferService;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+@Configuration
+@ComponentScan(basePackages={"com.doj.app.repository"})
+@ImportResource("spring.xml")
+@Import(InfrastructureConfig.class)
+public class AppConfig {
+	
+	@Bean
+	@Scope("prototype")
+	public IAccountRepository accountRepository(){
+		return new AccountRepository();
+	}
+	@Bean("service")
+	public TransferService transferService(){
+		return new TransferService(accountRepository());
+	}
+}

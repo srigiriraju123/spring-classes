@@ -1,0 +1,14 @@
+dburl=http://dbdomain.com/dnname
+user=root
+password=pwd
+driver=com.doj.mydb.MyDriver
+
+dev.dburl=http://dbdomain.com/dnname
+dev.user=root
+dev.password=pwd
+dev.driver=com.doj.mydb.MyDriver
+
+prod.dburl=http://dbdomain.com/dnname
+prod.user=root
+prod.password=pwd
+prod.driver=com.doj.mydb.MyDriver

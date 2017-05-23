@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Siri-Classes-Labs\11-SpringAOP-Around-Advice-Annotation"/>
+			<item value="D:\Siri-Classes-Labs\10-SpringAOP-Before-Advice-Annotation"/>
+			<item value="D:\Siri-Classes-Labs\09-Spring-Factory-Bean"/>
+			<item value="D:\Siri-Classes-Labs\06-Spring-Custom-Bean-Scope"/>
+			<item value="D:\Siri-Classes-Labs\05-Spring-Bean-Scopes"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="08-Spring-Initializer-Destory"/>
+			<item value="07-Spring-External-Prop-Scalar-Value"/>
+			<item value="04-Spring-App-Mix-Multiple-Configs"/>
+			<item value="03-Spring-App-Annotation-Config"/>
+			<item value="02-Spring-App-Java-Config"/>
+			<item value="01-Spring-Hello-Example"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="08-Spring-Initializer-Destory"/>
+			<item value="07-Spring-External-Prop-Scalar-Value"/>
+			<item value="04-Spring-App-Mix-Multiple-Configs"/>
+			<item value="03-Spring-App-Annotation-Config"/>
+			<item value="02-Spring-App-Java-Config"/>
+			<item value="01-Spring-Hello-Example"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

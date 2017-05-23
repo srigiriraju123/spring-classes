@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.doj.springapp.repository;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+public class AppDataSource {
+
+}

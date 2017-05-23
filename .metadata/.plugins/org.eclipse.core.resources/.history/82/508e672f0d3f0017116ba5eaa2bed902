@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.doj.springapp.service;
+
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.stereotype.Service;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+@Service("siri")
+public class AccountService implements BeanNameAware{
+
+	@Override
+	public void setBeanName(String beanName) {
+		System.out.println("Calling Bean Name Aware "+beanName);
+	}
+
+}
