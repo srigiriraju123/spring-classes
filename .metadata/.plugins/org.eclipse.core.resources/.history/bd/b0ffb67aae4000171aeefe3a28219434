@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.doj.springapp.rowmapper;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+public class AccountRowMapper {
+
+}

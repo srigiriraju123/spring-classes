@@ -5,7 +5,33 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-05-18T08:35:03Z</updated>
+  <updated>2017-05-23T17:36:00Z</updated>
+  <entry>
+    <title>This Week in Spring - May 23rd, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/05/23/this-week-in-spring-may-23rd-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-05-23:2931</id>
+    <updated>2017-05-23T17:36:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Amsterdam, NL and Essen, DE, talking to customers about cloud-native transformation. We&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2017/05/18/new-beta-versions-of-concourse-pipeline-and-cloud-foundry-manifest-editing-support-released-for-visual-studio-code"&gt;Spring Tool Suite lead Martin Lippert&lt;/a&gt; just announced a preview of Concourse Pipeline and Cloud Foundry manifest editing support releases as &lt;em&gt;a language server&lt;/em&gt;. These language servers can be used by any IDE or text editor that supports them, including in this case Microsoft&amp;rsquo;s Visual Studio Code and later STS itself.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Stream ninja Soby Chako &lt;a href="https://spring.io/blog/2017/05/17/spring-cloud-stream-chelsea-sr2-released"&gt;just announced Spring Cloud Stream.SR2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Simon Baslé just announced &lt;a href="https://spring.io/blog/2017/05/16/reactor-bismuth-release-train-first-milestone-available"&gt;the Reactor Bismuth release train M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Stéphane Nicoll just announced &lt;a href="https://spring.io/blog/2017/05/16/spring-boot-2-0-0-m1-available-now"&gt;Spring Boot 2.0M1&lt;/a&gt;! It&amp;rsquo;s finally here! Get the bits of the first major release towards a reactive Spring Boot 2.0. There&amp;rsquo;s so much good stuff, including an updated Gradle plugin, relaxed binding improvements, major dependency upgrades and so much more!&lt;/li&gt;
+  &lt;li&gt;I think this &lt;a href="https://blog.pchudzik.com/201705/batch-processing/"&gt;article by Pawe? Chudzik on &lt;em&gt;poor man&amp;rsquo;s batch&lt;/em&gt;&lt;/a&gt; solutions - iterating over large datasets - was very interesting. The conclusion is obvious: if you want to scroll through a large amount of records then use a &lt;code&gt;java.util.Stream&amp;lt;T&amp;gt;&lt;/code&gt; finder query in your Spring Data repository. That&amp;rsquo;s &lt;em&gt;one&lt;/em&gt; obvious conclusion. May I also humbly recommend that you look at &lt;a href="https://spring.io/blog/2017/02/01/spring-tips-spring-batch"&gt;Spring Batch&lt;/a&gt; and have a rich man&amp;rsquo;s batch at poor man&amp;rsquo;s prices? :)&lt;/li&gt;
+  &lt;li&gt;Want easier handling form encoded JSON in Spring MVC? Vote for &lt;a href="https://jira.spring.io/browse/SPR-13433"&gt;this issue&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;I liked this walk through on how to &lt;a href="https://www.codebyamir.com/blog/forgot-password-feature-with-java-and-spring-boot"&gt;implement a forgot password flow with Spring Boot&lt;/a&gt; on the &lt;em&gt;Code by Amir&lt;/em&gt; blog by Amir Boroumand.&lt;/li&gt;
+  &lt;li&gt;Amir Boroumand &lt;em&gt;also&lt;/em&gt; has a nice walkthrough &lt;a href="https://www.codebyamir.com/blog/create-rest-api-with-spring-boot"&gt;on creating a REST API with Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Our friends at JDriven are doing what appears to be an awesome (though I think Dutch-language) on &lt;a href="https://www.jdriven.com/event/workshop/mqtt/"&gt;MQTT and Spring Cloud Stream and Spring Cloud Data Flow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I liked this fairly approachable look at how to &lt;a href="https://github.com/making/cf-vault"&gt;deploy Hashicorp Vault to Cloud Foundry&lt;/a&gt; by our very own Toshiaki Maki.&lt;/li&gt;
+  &lt;li&gt;Want a bit of insight into what the future of Serverless looks for Spring? Check out the slides to the good Dr. Dave Syer&amp;rsquo;s presentation &lt;a href="http://presos.dsyer.com/decks/road-to-serverless.html"&gt;on Spring Cloud Function&lt;/a&gt; at Spring IO&lt;/li&gt;
+  &lt;li&gt;WeaveWorks&amp;rsquo; Scope is now available and &lt;a href="https://www.weave.works/blog/scope-illuminates-cloud-foundry/"&gt;supports Cloud Foundry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I liked this rant from Steve Yegge on &lt;a href="http://steve-yegge.blogspot.com/2017/05/why-kotlin-is-better-than-whatever-dumb.html"&gt;why Kotlin is a nice language&lt;/a&gt;. Interesting reading!&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>New beta versions of Concourse pipeline and Cloud Foundry manifest editing support released for Visual Studio Code</title>
     <link rel="alternate" href="https://spring.io/blog/2017/05/18/new-beta-versions-of-concourse-pipeline-and-cloud-foundry-manifest-editing-support-released-for-visual-studio-code" />
@@ -949,23 +975,5 @@ WebFilter springSecurityFilterChain(ReactiveAuthenticationManager manager) {&#xD
 &lt;/ul&gt;
 &lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Athens-SR5/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Session 1.3.1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/04/27/spring-session-1-3-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2017-04-27:2912</id>
-    <updated>2017-04-27T19:35:15Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the community, I&amp;rsquo;m pleased to announce the release of Spring Session 1.3.1.RELEASE. &lt;a href="https://github.com/spring-projects/spring-session/milestone/21?closed=1"&gt;This release contains&lt;/a&gt; numerous bug fixes. A special thanks to &lt;a href="https://github.com/vpavic"&gt;Vedran Pavi?&lt;/a&gt; and &lt;a href="https://github.com/jxblum"&gt;John Blum&lt;/a&gt; for all their hard work!&lt;/p&gt;
-&lt;p&gt;Some of the highlights include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/756"&gt;#756&lt;/a&gt; - Usage of Spring Data Redis 1.7.1 which has critical bug&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/757"&gt;#757&lt;/a&gt; - Restore proper behavior of HttpSession created events in GemFire&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/755"&gt;#755&lt;/a&gt; - Improve GemFire SessionRepository, (HTTP) Session copy logic&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/current/reference/html5/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-session"&gt;Help&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

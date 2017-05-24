@@ -1,0 +1,1 @@
+INSERT INTO ACCOUNT COLUMNS (id, name, balance) values (1000, 'Dinesh', 20000);

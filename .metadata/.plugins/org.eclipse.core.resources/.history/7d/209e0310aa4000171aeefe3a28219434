@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.doj.springapp.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+@Configuration
+public class InfrastructureConfig {
+ //have infrastructure related beans like DataSource, JNDI, etc.
+	
+	public EmbeddedDatabase dataSource(){
+		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2);
+		builder.addScript("schema.sql");
+		builder.addScript("data.sql");
+		return builder.build();
+	}
+}

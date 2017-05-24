@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package com.doj.springapp.repository;
+
+import com.doj.springapp.model.Account;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+public class JdbcTransferRepository implements TransferRepository {
+
+	/* (non-Javadoc)
+	 * @see com.doj.springapp.repository.TransferRepository#tranfer(java.lang.Long, com.doj.springapp.model.Account)
+	 */
+	@Override
+	public void tranfer(Long amount, Account account) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
