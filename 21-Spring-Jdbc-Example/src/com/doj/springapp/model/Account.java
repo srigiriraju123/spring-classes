@@ -38,5 +38,8 @@ public class Account {
 		super();
 		this.id = id;
 	}
+	public Account() {
+		super();
+	}
 	
 }

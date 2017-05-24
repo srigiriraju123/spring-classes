@@ -37,7 +37,7 @@ public class ServiceCaller {
 		//TransferService transferService = applicationContext.getBean("transferService",TransferService.class);
 		//No need to downcast-find bean by type-recommended
 		TransferService transferService = applicationContext.getBean(TransferService.class);
-		transferService.transfer(200l, 1l, 2l);
+		transferService.transfer(500l, 1000l, 2000l);//4 steps -2steps OK-3step -Error//Transaction-Work-Complete Work-Committed
 	}
 
 }
