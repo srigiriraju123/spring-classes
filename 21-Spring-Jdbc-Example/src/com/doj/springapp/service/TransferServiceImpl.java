@@ -37,7 +37,7 @@ public class TransferServiceImpl implements TransferService{
 	@Override
 	@Transactional //Demarcation
 	public void transfer(Long amount, Long a, Long b){
-		Account accountA = accountRepository.findAccountById(a);//update 1-OK//rollback//connect1//close
+		Account accountA = accountRepository.findAccountById(a);//update 1-OK//rollback//connect
 		Account accountB = accountRepository.findAccountById(b);////update 2//rollback//connect//close
 		transferRepository.tranfer(amount, accountB); ////update 3-Not OK-
 		System.out.println("Amount has been transfered from "+accountA +" to "+accountB);
