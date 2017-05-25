@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;23-Spring-Data-JPA-Example&apos;&#x0D;&#x0A;- Original project: &apos;23-Spring-Data-JPA-Example&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.doj.springapp.repository.JdbcAccountRepository.java&#x0D;&#x0A;     com.doj.springapp.repository.JdbcTransferRepository.java&#x0D;&#x0A;     com.doj.springapp.repository.JpaAccountRepository.java" description="Delete elements" element1="/src&lt;com.doj.springapp.repository{JdbcAccountRepository.java" element2="/src&lt;com.doj.springapp.repository{JdbcTransferRepository.java" element3="/src&lt;com.doj.springapp.repository{JpaAccountRepository.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1495735622992" subPackages="false" version="1.0"/>
+</session>

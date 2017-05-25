@@ -21,7 +21,7 @@ public class InfrastructureConfig {
  //have infrastructure related beans like DataSource, JNDI, etc.
 	@Bean
 	public DataSource dataSource(){
-		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2);
+		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2);//in-memory
 		builder.addScript("schema.sql");
 		builder.addScript("data.sql");
 		return builder.build();

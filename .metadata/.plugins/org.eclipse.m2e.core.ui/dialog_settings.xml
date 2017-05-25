@@ -14,6 +14,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Siri-Classes-Labs\12-SpringAOP-Before-Advice-XML"/>
 			<item value="D:\Siri-Classes-Labs\11-SpringAOP-Around-Advice-Annotation"/>
 			<item value="D:\Siri-Classes-Labs\10-SpringAOP-Before-Advice-Annotation"/>
 			<item value="D:\Siri-Classes-Labs\09-Spring-Factory-Bean"/>
@@ -31,6 +32,8 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="22-Spring-ORM-Example"/>
+			<item value="21-Spring-Jdbc-Example"/>
 			<item value="08-Spring-Initializer-Destory"/>
 			<item value="07-Spring-External-Prop-Scalar-Value"/>
 			<item value="04-Spring-App-Mix-Multiple-Configs"/>
@@ -41,6 +44,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="22-Spring-ORM-Example"/>
+			<item value="21-Spring-Jdbc-Example"/>
 			<item value="08-Spring-Initializer-Destory"/>
 			<item value="07-Spring-External-Prop-Scalar-Value"/>
 			<item value="04-Spring-App-Mix-Multiple-Configs"/>

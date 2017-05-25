@@ -1,0 +1,295 @@
+Banking Sector
+Transfer Money
+Account From - POJO -Id, name, balance
+Account To
+Amount howmuch.
+
+interface AccountRepository{}
+
+class JpaAccountRepository implements AccountRepository{
+  Account getAccountById(long id){
+  //using JPA
+  }
+}
+
+class JdbcAccountRepository implements AccountRepository{
+  Account getAccountById(long id){
+  //Using JDBC
+  }
+}
+
+
+interface TransferService{
+ void transfer();
+} 
+class TransferServiceImpl implemnets TransferService{
+    AccountRepository accountRepository;
+	 public TransferServive(AccountRepository accountRepository){
+	  this.accountRepository = accountRepository;
+	}
+	public void transfer(long a, long b, double amount){
+	    Account Aa = accountRepository.getAccountById(a);
+       Account Ab =	   accountRepository.getAccountById(b);
+	
+	}
+
+//Good Practice--Always program to interface instead implementation	
+class Main{
+p s v m(){
+TransferService service = Factory.getInstance(TransferService.class);
+service.transfer(a,b,100);
+}
+
+}
+
+Transfer - Repositry
+============
+spring.xml
+============
+
+<beans >
+  <bean id ="transferService", class="com.doj.TransferServiceImpl">
+     <construct-arg ref="accountRepository"> //construction injection-always use for mandatory depedendcy
+  </bean>
+  
+  
+  <beans profile="dev">
+  <bean id ="accountRepository", class="com.doj.JdbcAccountRepository">
+    </bean>
+  </beans >
+   
+   <beans  profile="prod">
+    <bean id ="accountRepository", class="com.doj.JpaAccountRepository">
+   </bean>
+  </beans>
+   
+</beans>
+
+
+
+
+Test-- DataSource -Local JDBC
+Production - DataSource -ORM/JPA
+
+
+
+Class A{
+ B bbb;
+ 
+ public void setB(B b){
+ this.bbb = b;
+ }
+}
+
+Class B{
+
+}
+
+  <bean id ="a", class="com.doj.A">
+    <property name="bbb" ref="b"/> //it is not mandatory -Setter Injection-For Circular Depedency 
+  </bean>
+  
+  <bean id ="b", class="com.doj.B">
+    
+  </bean>
+  
+  
+  
+  Class A{
+  B b;
+  A(B b){
+  this.b = b;
+  }
+  }
+  
+  Class B{
+  A a;
+  B(A a){
+  this.a=a;
+  }
+  
+  }
+//Cric
+
+
+=========1st Class=============
+1. What Spring
+2. Why use Spring in enterprise
+3. IoC - Concept
+4. DI -Pattern (Design)-Loose coupling between collaboorating components
+5. Constructor Inject (for Mandatory Depedencies) - Cause create Circular Dependencies
+6. Setter Injection (for non mandatory depedencies) - Solving Circular Dependencies
+7. Circular Dependency
+=======2nd Class=============
+8. How Spring Works
+9. Spring Containers A. BeanFactory B. ApplicationContext=BeanFactory+Extra features
+ApplicationContext
+. ClassPathXMLApplicationContext-XML-in-classpath-application
+. FileSystemXMLApplicationContext-XML-in-filesystem-application
+. AnnotationConfigApplicationConetxt-java based config-java-in-classpath
+10. Spring Hello Example with XML and Java Configuration
+11. Creating Application Context -it's implementations
+12. Accessing Beans from container
+13. Spring Configurations-XML, Java, Annotation
+14. Multiple configuration files and Mix Configurations
+15. Resolving ambiguity of application -@Primary/@Order
+16. Field Injection by Autowired annotation-default byType then byName, it spring annotation, applied at field, constructor, method level 
+17. @Resource annotation-it is not related spring, it javax annotation i.e. available from JSR-250 APi, default byName then byType, only applied for field level
+==================3rd class=================
+18. Bean Scopes-default scope singleton, prototype, request, session, global session .
+19. Creating Custom Scope..MyBean-MyThreadScope->Container
+20. bean life cycle
+==================4th class========================
+21. External Properties
+22. Profile
+23. Proxying--AppConfig -- based on Proxy Design Pattern
+AppConfig$$CGLIBApppConfig$$ extends AppConfig{
+
+}
+24. JSR 250 Annotations and its equivalent in the Spring---@Resource/@PostConstruct/@PreDestroy (javax)//Spring 2.5
+25. JSR 330 Annotations //Spring 3.0 @Inject, @Named-Service-conponent-repose
+=========================5th Class=========
+26. BeanNameAware, BeanFactoryAware, ApplicationContextAware
+27. @Lazy, FactoryBean  A with lazy-- definition is loaded but it is not initilized by default, only initilized when refrenced
+28. kinds of proxies
+29. Spring AOP -AspectJ (Aspect Oriented Programming)
+Code tangling-(mixing your non productive code with your productive)
+Code scattering-duplicity of non productive code across application
+
+Logging is Concern - Applied to across applications classes-called cross cutting concerned
+
+Business-m1, m2, m3 etc.---we have to tell container about these points m1, m2 etc......rules, expressiion, in AOP term called pointcut expression. 
+
+1. Pointcut- way of declare a joinpoint using expression or rules or designators
+2. JoinPoint - is point of executions of advices.
+3. Advice-Code to execute at joint point accodring declaration
+Before, After, AfterReturning, AfterThrowing, Around(it is very powerful in spring)
+4. Aspect-it is class, encapsulate the pointcut and advice
+5. Weaving - Process to weave advices at given point cuts, spring aop support only run time weaving or load time weaving through proxy.
+6. Target object
+7. AOP proxy
+
+Note: Never confused with BeanFactory and FactoryBean
+BeanFactory-based on Factory Design Pattern, it is container
+FactoryBean-based on Abstract Factory Design Pattern, it is not container but it is with in container like normal bean, but have trasparent way accessing bean from container by calling getObject() method of this interface.
+
+Spring Support two type proxies
+1. Dynamic Proxy -JDK Proxy-Interface Proxy-@Transactional -Proxy, @Secure, etc, AOP based proxy
+2. CGLIB Proxy- Class Proxy
+=========================6th Class==========================
+30. Spring PointCut declaration/supported designators
+execution,within,this,target,args
+31. AOP XML based configuration
+32. Combining pointcut expressions (Pointcut expressions can be combined using '&&', '||' and '!'.)
+33. Spring in Backend
+34. Template Design Pattern in Spring 
+35. Exception Handling at DAO layer (DataAccessException) - RuntimeException
+36. Using Embedded Data (H2 DB, HSQL) same as RDBMS but in memory database
+37. jdbc namespace
+38. Jdbc Template-Overview, Creating, Example
+39. Jdbc Callbacks-RowMapper,RowCallBackHandler, ResultSetExatractor
+40. Transaction Management with Spring
+41. What is Transaction
+42. ACID
+43. Java Transaction Management-is it suitable?
+Problems-Differents APIs, At DAO Layers, Programatic, Orthogonal Concern i.e. Demarcation vs implementation
+44. Spring Transaction Management solve these?? what solves??? 	
+Using AOP
+Using PTM
+Same for Global and for Local-just change manager
+45. Apply Spring Transaction
+Step 1- Declate PTM
+Step 2- Declare Transactional Method
+46. @Transactional, isolation levels,Propagations,RollBacks,readOnly
+47. Examples
+===========================7th class======================
+48. Spring ORM (JPA/Spring Data)-Hibernate, JPA implemenation
+49. Spring Data-
+
+
+
+Object getBean("transefrService");
+
+XML Based      Java Based       Annotation based
+spring.xml ==  AppConfig.java ==Java/XML
+<beans> ==     @Configuration = Java/XML
+<bean>       == @Bean ==      == @Component/@Service/@Respository/@Controller
+<bean>
+<context:component-scan> == @ComponentScan
+<context:property-placeholder> == @PropertySoruce
+init-method ==     initMethod            ==@PostContruct
+destroy-method  = destroyMethod ===@PreDestory
+lazy-init=true == @Lazy ======   @Lazy
+<aop:aspect ref="loggingAspect">==       @Aspect   
+<aop:pointcut>      == @Pointcut
+<aop:before>==== @Around
+<aop:aspectj-autoproxy/> == @EnableAspectJAutoProxy
+
+
+@Component
+1. @Service -Service classes -meta annotation
+2. @Repository -Repository classes -meta annotation
+3. @Controller -Controller classes in WEB. -meta annotation
+
+AppConfig#Proxy123 extends AppConfig{
+IAccountRepository accountRepository();
+transferService
+transferService
+}
+catalina.propertes
+
+1st BPP activate the annotations like --@PostConstruct/@Resource/@Autowried etc...............
+
+GitHub Credential
+---------------------
+srigiriraju2@gmail.com
+srigiri123
+
+
+execution - for matching method execution join points, this is the primary pointcut designator you will use when working with Spring AOP
+within - limits matching to join points within certain types (simply the execution of a method declared within a matching type when using Spring AOP)
+this - limits matching to join points (the execution of methods when using Spring AOP) where the bean reference (Spring AOP proxy) is an instance of the given type
+target - limits matching to join points (the execution of methods when using Spring AOP) where the target object (application object being proxied) is an instance of the given type
+args - limits matching to join points (the execution of methods when using Spring AOP) where the arguments are instances of the given types
+@target - limits matching to join points (the execution of methods when using Spring AOP) where the class of the executing object has an annotation of the given type
+@args - limits matching to join points (the execution of methods when using Spring AOP) where the runtime type of the actual arguments passed have annotations of the given type(s)
+@within - limits matching to join points within types that have the given annotation (the execution of methods declared in types with the given annotation when using Spring AOP)
+@annotation - limits matching to join points where the subject of the join point (method being executed in Spring AOP) has the given annotation 
+
+Some examples of common pointcut expressions are given below.
+
+    the execution of any public method: 
+
+execution(public * *(..))
+
+    the execution of any method with a name beginning with "set": 
+
+execution(* set*(..))
+
+    the execution of any method defined by the AccountService interface: 
+
+execution(* com.xyz.service.AccountService.*(..))
+
+    the execution of any method defined in the service package: 
+
+execution(* com.xyz.service.*.*(..))
+
+    the execution of any method defined in the service package or a sub-package: 
+
+execution(* com.xyz.service..*.*(..))
+
+    any join point (method execution only in Spring AOP) within the service package: 
+
+within(com.xyz.service.*)
+
+    any join point (method execution only in Spring AOP) within the service package or a sub-package: 
+
+within(com.xyz.service..*)
+
+    any join point (method execution only in Spring AOP) where the proxy implements the AccountService interface: 
+
+this(com.xyz.service.AccountService)
+
+
+//Spring Caching enabling
+//Spring with NoSQL//mongodb
