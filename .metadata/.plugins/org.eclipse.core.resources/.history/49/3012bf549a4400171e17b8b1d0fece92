@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package com.doj.webapp.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+@Configuration
+@ComponentScan
+public class ApplicationConfig {
+
+}

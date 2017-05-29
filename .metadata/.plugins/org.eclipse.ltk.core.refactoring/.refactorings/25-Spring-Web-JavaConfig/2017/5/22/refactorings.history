@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.doj.webapp.web.controller.TransferController&apos; to &apos;AccountController&apos;&#x0D;&#x0A;- Original project: &apos;25-Spring-Web-JavaConfig&apos;&#x0D;&#x0A;- Original element: &apos;com.doj.webapp.web.controller.TransferController&apos;&#x0D;&#x0A;- Renamed element: &apos;com.doj.webapp.web.controller.AccountController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TransferController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.doj.webapp.web.controller{TransferController.java[TransferController" matchStrategy="1" name="AccountController" qualified="false" references="true" similarDeclarations="false" stamp="1496081745031" textual="false" version="1.0"/>
+</session>

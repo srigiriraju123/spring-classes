@@ -1,4 +1,0 @@
-dburl=http://dbdomain.com/dnname
-user=root
-password=pwd
-driver=com.doj.mydb.MyDriver

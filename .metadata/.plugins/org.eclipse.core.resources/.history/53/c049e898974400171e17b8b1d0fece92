@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.doj.webapp.config;
+
+/**
+ * @author Dinesh.Rajput
+ *
+ */
+public class ApplicationConfig {
+
+}
