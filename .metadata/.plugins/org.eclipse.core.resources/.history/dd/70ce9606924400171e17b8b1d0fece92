@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="25-Spring-Web-JavaConfig">
-        <property name="context-root" value="25-Spring-Web-JavaConfig"/>
-    </wb-module>
-</project-modules>

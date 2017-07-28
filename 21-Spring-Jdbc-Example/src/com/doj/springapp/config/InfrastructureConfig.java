@@ -18,13 +18,18 @@ import org.springframework.transaction.PlatformTransactionManager;
  */
 @Configuration
 public class InfrastructureConfig {
- //have infrastructure related beans like DataSource, JNDI, etc.
+ //have infrastructure related beans like DataSource, JNDI, etc. dbcp, c3p0
 	@Bean
 	public DataSource dataSource(){
 		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2);//in-memory
 		builder.addScript("schema.sql");
 		builder.addScript("data.sql");
 		return builder.build();
+		
+		/*<jdbc:embedded-database id="dataSouurce" type="H2">
+ 		<jdbc:script location="schema.sql"/>
+ 		<jdbc:script location="data.sql"/>
+ 	    </jdbc:embedded-database>*/
 	}
 	
 	@Bean //implementation

@@ -8,10 +8,7 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.doj.springapp.config.AppConfig;
 import com.doj.springapp.model.Account;
 
 /**
@@ -35,7 +32,7 @@ public class JdbcAccountRepository implements AccountRepository, InitializingBea
 	@PreDestroy//Done by JSR 250
 	void cleanUp(){
 		//TODO =release network connection
-		System.out.println("releasse cache date from application");
+		System.out.println("release cache date from application");
 	}
 
 	@Override

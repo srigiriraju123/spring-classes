@@ -15,7 +15,7 @@ import com.doj.springapp.model.Account;
 @Repository
 public class JdbcAccountRepository implements AccountRepository{
 	
-	@Autowired
+	@Autowired///how resolve di-BPP
 	AppDataSource dataSource;
 	
 	@Override

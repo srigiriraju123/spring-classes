@@ -3,8 +3,7 @@
  */
 package com.doj.springapp.service;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.doj.springapp.model.Account;
@@ -16,8 +15,10 @@ import com.doj.springapp.repository.AccountRepository;
  */
 @Service
 public class TransferServiceImpl implements TransferService{
-	//1. always resolve dependency by type if failure then its try with by property name
-	@Resource(name="jdbcAccountRepository") 
+	//1. always resolve dependency by type if failure then its try with by property name//JSR 250-J2ee
+	//@Resource(name="jdbcAccountRepository") 
+	@Autowired
+	//@Qualifier("jpaAccountRepository")
 	AccountRepository accountRepository;
 	//As of Spring 4.3 if any class has single argument constructor then no need too define dependency definition to container
 	//autowired always resolve dependency by type

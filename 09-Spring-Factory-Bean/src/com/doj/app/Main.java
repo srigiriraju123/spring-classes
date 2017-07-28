@@ -11,7 +11,7 @@ import com.doj.app.repository.IAccountRepository;
 import com.doj.app.service.TransferService;
 
 /**
- * @author Manzoor Alam
+ * @author Dinesh Rajput
  *
  */
 public class Main {

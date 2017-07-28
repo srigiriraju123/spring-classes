@@ -15,7 +15,7 @@ import com.doj.springapp.repository.JdbcAccountRepository;
  *
  */
 @Configuration
-@ComponentScan(basePackages={"com.doj.springapp.repository", "com.doj.springapp.service"})//implicity bean creation
+@ComponentScan(basePackages={"com.doj.springapp.repository", "com.doj.springapp.service", "com.doj.springapp.bfpp", "com.doj.springapp.bpp"})//implicity bean creation
 public class AppConfig {
 	@Bean(initMethod="populateCache", destroyMethod="cleanUp")
 	public AccountRepository accountRepository(){

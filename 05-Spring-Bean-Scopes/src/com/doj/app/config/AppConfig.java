@@ -4,10 +4,8 @@
 package com.doj.app.config;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Scope;
 
 import com.doj.app.repository.AccountRepository;
@@ -17,16 +15,16 @@ import com.doj.app.service.TransferService;
 
 /**
  * @author Dinesh.Rajput
- *
+ * CGLIB--AppConfig#CGLIB$$ extends AppConfig{//Cached all singleton beans call }
  */
 @Configuration
-@ComponentScan(basePackages={"com.doj.app.repository"})
-@ImportResource("spring.xml")
+//@ComponentScan(basePackages={"com.doj.app.repository"})
+//@ImportResource("spring.xml")
 @Import(InfrastructureConfig.class)
 public class AppConfig {
 	
 	@Bean
-	@Scope("singleton")
+	@Scope("prototype")
 	public IAccountRepository accountRepository(){
 		System.out.println("Calling accountRepository()");
 		return new AccountRepository();

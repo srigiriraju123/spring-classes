@@ -11,7 +11,7 @@ import com.doj.app.repository.AccountRepositoryFactoryBean;
 
 /**
  * @author Dinesh.Rajput
- *
+ * @Website www.dineshonjava.com
  */
 @Configuration
 @ComponentScan(basePackages={"com.doj.app.service"})
@@ -20,8 +20,8 @@ public class AppConfig {
 	/*@Bean
 	public IAccountRepository accountRepository(){
 		return new AccountRepository();
-	}*/
-	
+	}
+	*/
 	@Bean
 	public AccountRepositoryFactoryBean accountRepository(){
 		return new AccountRepositoryFactoryBean();

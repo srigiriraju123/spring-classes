@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="24-Spring-Web-App"/>
+<aop-project name="11-SpringAOP-Around-Advice-Annotation"/>
 </aop-reference-model>

@@ -3,6 +3,8 @@
  */
 package com.doj.springapp.repository;
 
+import java.util.List;
+
 import com.doj.springapp.model.Account;
 
 /**
@@ -11,4 +13,5 @@ import com.doj.springapp.model.Account;
  */
 public interface AccountRepository {
 	Account findAccountById(Long id);
+	List<Account> findAccountAll();
 }

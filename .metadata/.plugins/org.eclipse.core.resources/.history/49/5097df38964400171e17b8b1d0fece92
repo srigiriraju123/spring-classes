@@ -1,9 +1,0 @@
- <form action="create" method="post">
-  First name:<br>
-  <input type="text" name="firstname"><br>
-  Last name:<br>
-  <input type="text" name="lastname">
-  Address:<br>
-  <input type="text" name="address">
-  <input type="submit">
-</form> 

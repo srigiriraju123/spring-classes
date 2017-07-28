@@ -7,6 +7,7 @@
 		<item value="org.eclipse.ajdt:2.2.4.201612122115"/>
 		<item value="org.eclipse.cft.server.core.feature:1.2.0.v201611302157"/>
 		<item value="org.eclipse.cft.server.ui.feature:1.0.7.v201611302157"/>
+		<item value="org.eclipse.cvs:1.4.302.v20170301-0400"/>
 		<item value="org.eclipse.draw2d:3.10.100.201606061308"/>
 		<item value="org.eclipse.egit.mylyn:4.5.0.201609210915-r"/>
 		<item value="org.eclipse.egit:4.5.0.201609210915-r"/>
@@ -115,7 +116,7 @@
 	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
 		<item value="false" key="FilterByLocation"/>
 		<item value="true" key="ShowStatusLine"/>
-		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/07-Spring-External-Prop-Scalar-Value-Profile/resources/app.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
 		<item value="false" key="ShowDerived"/>
 		<section name="DialogBoundsSettings">

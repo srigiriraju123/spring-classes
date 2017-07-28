@@ -3,6 +3,8 @@
  */
 package com.doj.springapp.repository;
 
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -45,7 +47,15 @@ public class JdbcAccountRepository implements AccountRepository{
 	
 	@Override
 	public Account findAccountById(Long id){
-		String sql = "SELECT * FROM Account WHERE id = "+id;
-		return jdbcTemplate.queryForObject(sql, new AccountRowMapper());
+		String sql = "SELECT * FROM Account WHERE id = ?";
+		return jdbcTemplate.queryForObject(sql, new AccountRowMapper(),id);
+	}
+
+
+
+	@Override
+	public List<Account> findAccountAll() {
+		String sql = "SELECT * FROM Account";
+		return jdbcTemplate.query(sql, new AccountRowMapper());
 	}
 }

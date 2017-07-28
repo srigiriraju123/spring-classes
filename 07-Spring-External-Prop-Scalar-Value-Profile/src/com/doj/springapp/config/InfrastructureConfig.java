@@ -3,10 +3,12 @@
  */
 package com.doj.springapp.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 
 import com.doj.springapp.repository.AppDataSource;
 
@@ -25,7 +27,8 @@ public class InfrastructureConfig {
 	@Value("${password}") 	String password;
 	@Value("${driver}") 	String driver;
 	
-	/*@Autowired
+	//One way
+	@Autowired
 	public Environment env;
 	
 	@Bean
@@ -36,8 +39,9 @@ public class InfrastructureConfig {
 		appDataSource.setPassword(env.getProperty("password"));
 		appDataSource.setUser(env.getProperty("user"));
 		return appDataSource;
-	}*/
+	}
 	
+	//Second way
 	/*@Bean
 	public AppDataSource dataSource(
 			@Value("${dburl}") String dburl, 
@@ -54,7 +58,7 @@ public class InfrastructureConfig {
 		return appDataSource;
 	}
 	
-	
+	//Third Way
 	/*@Bean
 	@Profile("prod")
 	public AppDataSource prodDataSource(

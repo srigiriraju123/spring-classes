@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;27-Spring-RestTemplate/src&apos;&#x0D;&#x0A;- Original project: &apos;26-Spring-REST&apos;&#x0D;&#x0A;- Destination element: &apos;27-Spring-RestTemplate/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     26-Spring-REST/src/com.doj.webapp.model&#x0D;&#x0A;     26-Spring-REST/src/com.doj.webapp.config" description="Copy packages" destination="=27-Spring-RestTemplate/src" element1="/src&lt;com.doj.webapp.model" element2="/src&lt;com.doj.webapp.config" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1496254989717" version="1.0"/>
+</session>

@@ -40,6 +40,9 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="27-Spring-RestTemplate"/>
+			<item value="26-Spring-REST"/>
+			<item value="25-Spring-Web-JavaConfig"/>
 			<item value="24-Spring-Web-App"/>
 			<item value="23-Spring-Data-JPA-Example"/>
 			<item value="22-Spring-ORM-Example"/>
@@ -54,6 +57,9 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="27-Spring-RestTemplate"/>
+			<item value="26-Spring-REST"/>
+			<item value="25-Spring-Web-JavaConfig"/>
 			<item value="24-Spring-Web-App"/>
 			<item value="23-Spring-Data-JPA-Example"/>
 			<item value="22-Spring-ORM-Example"/>

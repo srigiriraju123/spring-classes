@@ -13,4 +13,8 @@
  	<import resource="app2.xml"/> -->
  	
  	<!-- <bean class="com.doj.springapp.config.AppConfig"/> -->
+ 	<jdbc:embedded-database id="dataSouurce" type="H2">
+ 		<jdbc:script location="schema.sql"/>
+ 		<jdbc:script location="data.sql"/>
+ 	</jdbc:embedded-database>
 </beans>
