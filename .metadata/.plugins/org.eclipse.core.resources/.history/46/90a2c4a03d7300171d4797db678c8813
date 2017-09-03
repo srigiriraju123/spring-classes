@@ -1,7 +1,0 @@
-package com.doj.springapp.rowmapper;
-
-import org.springframework.jdbc.core.ResultSetExtractor;
-
-public class AccountExtract implements ResultSetExtractor<T> {
-
-}

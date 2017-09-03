@@ -37,6 +37,7 @@ public class AppConfig {
 	}
 	
 	@Bean
+	//@Lazy
 	public AccountService accountService(){
 		System.out.println("2nd call");
 		return new AccountService(accountRepository());//2nd call

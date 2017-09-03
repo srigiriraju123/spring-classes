@@ -31,7 +31,7 @@ public class ServiceCaller {
 		//2. resolved
 		//3. resolved
 		//System.setProperty("spring.profiles.active", "dev");
-		System.setProperty("ENV", "prod");
+		System.setProperty("ENV", "dev");
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		//ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 		//We have to downcast-find bean by name

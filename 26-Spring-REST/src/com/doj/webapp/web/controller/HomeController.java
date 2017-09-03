@@ -29,8 +29,10 @@ public class HomeController {
 	
 	//@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@PostMapping("/create")
-	public String saveUser (User user, ModelMap model){
+	public String saveUser ( User user, ModelMap model){
 		model.put("user", user);
 		return "addUser";
 	}
 }
+
+//JSON-converts to User Java object- Done by Request Body

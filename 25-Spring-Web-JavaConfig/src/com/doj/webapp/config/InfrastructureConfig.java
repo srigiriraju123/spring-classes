@@ -36,6 +36,7 @@ public class InfrastructureConfig {
 		HibernateJpaVendorAdapter bean = new HibernateJpaVendorAdapter();
 		bean.setDatabase(org.springframework.orm.jpa.vendor.Database.H2);
 		bean.setGenerateDdl(true);
+		bean.setShowSql(true);
 		return bean;
 	}
 

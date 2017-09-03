@@ -18,16 +18,20 @@ public class TransferServiceImpl implements TransferService{
 	//1. always resolve dependency by type if failure then its try with by property name//JSR 250-J2ee
 	//@Resource(name="jdbcAccountRepository") 
 	@Autowired
-	//@Qualifier("jpaAccountRepository")
+	//@Qualifier("jdbcAccountRepository")
 	AccountRepository accountRepository;
 	//As of Spring 4.3 if any class has single argument constructor then no need too define dependency definition to container
 	//autowired always resolve dependency by type
-	/*@Autowired 
-	public TransferServiceImpl(@Qualifier("jpaAccountRepository") AccountRepository accountRepository) {
+	//@Autowired 
+	/*public TransferServiceImpl(@Qualifier("jpaAccountRepository") AccountRepository accountRepository) {
 		super();
 		this.accountRepository = accountRepository;
 	}*/
-	
+	/*@Resource(name="jdbcAccountRepository") 
+	public void setAccountRepository(AccountRepository accountRepository) {
+		this.accountRepository = accountRepository;
+	}*/
+
 	@Override
 	public void transfer(Long amount, Long a, Long b){
 		Account accountA = accountRepository.findAccountById(a);

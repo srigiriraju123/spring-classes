@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.doj.app.config.AppConfig;
+import com.doj.app.repository.IAccountRepository;
 import com.doj.app.service.TransferService;
 
 /**
@@ -27,11 +28,16 @@ public class Main {
 		TransferService transferService = applicationContext.getBean(TransferService.class);
 		TransferService transferService2 = applicationContext.getBean(TransferService.class);
 		System.out.println(transferService == transferService2);
-		/*AccountRepository a1 = applicationContext.getBean(AccountRepository.class);
-		AccountRepository a2 = applicationContext.getBean(AccountRepository.class);
-		System.out.println(a1==a2);*/
+		IAccountRepository a1 = applicationContext.getBean(IAccountRepository.class);
+		IAccountRepository a2 = applicationContext.getBean(IAccountRepository.class);
+		System.out.println(a1==a2);
 		//TransferService transferService =  applicationContext.getBean(TransferService.class);
 		transferService.transfer("A", "B", 3000.1);
+		//AccountService a2 = applicationContext.getBean(AccountService.class);
+		//System.out.println(a2);
+//		for(String beanName : applicationContext.getBeanDefinitionNames()){
+//			System.out.println(beanName);
+//		}
 	}
 
 }

@@ -13,7 +13,7 @@ import com.doj.app.repository.IAccountRepository;
  *
  */
 @Service
-@Scope("prototype")
+//@Scope("prototype")
 public class TransferService {
 	//@Autowired
 	IAccountRepository accountRepository;

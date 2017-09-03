@@ -20,4 +20,8 @@ public interface TransferService {
 	List<Account> findAllAccounts();
 	
 	Account findById(Long id);
+	
+	void delete(Long id);
+
+	void update(Account account);
 }

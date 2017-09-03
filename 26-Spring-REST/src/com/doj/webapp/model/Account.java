@@ -8,6 +8,10 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author Dinesh.Rajput
@@ -15,19 +19,19 @@ import javax.persistence.Table;
  */
 @Table
 @Entity
-//@XmlRootElement (name = "account")
-//@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement (name = "account")
+@XmlAccessorType(XmlAccessType.NONE)
 public class Account implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id//Pk
-	//@XmlAttribute
+	@XmlAttribute
 	Long id;
-	//@XmlAttribute
+	@XmlAttribute
 	Long balance;
-	//@XmlAttribute
+	@XmlAttribute
 	String name;
 	public Long getId() {
 		return id;

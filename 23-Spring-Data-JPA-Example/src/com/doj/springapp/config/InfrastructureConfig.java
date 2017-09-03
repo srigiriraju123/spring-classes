@@ -45,7 +45,7 @@ public class InfrastructureConfig {
 		LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
 		bean.setDataSource(dataSource);
 		bean.setJpaVendorAdapter(jpaVendorAdapter);
-		bean.setPackagesToScan("com.doj.webapp.model");
+		bean.setPackagesToScan("com.doj.springapp.model");
 		return bean;
 	}
 

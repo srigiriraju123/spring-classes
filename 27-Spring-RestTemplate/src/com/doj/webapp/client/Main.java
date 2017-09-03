@@ -29,7 +29,19 @@ public class Main {
 		RestTemplate restTemplate = new RestTemplate();
 		Account account = restTemplate.getForObject("http://localhost:8080/26-Spring-REST/accounts/1000", Account.class);
 		List<Account>  accounts = restTemplate.getForObject("http://localhost:8080/26-Spring-REST/all-accounts", List.class);
+		System.out.println(accounts);
+		//restTemplate.delete("http://localhost:8080/26-Spring-REST/accounts/1000");
+		account = new Account(5000l);
+		account.setBalance(459553l);
+		account.setName("Arnav");
+		restTemplate.postForLocation("http://localhost:8080/26-Spring-REST/open-account", account);
+		accounts = restTemplate.getForObject("http://localhost:8080/26-Spring-REST/all-accounts", List.class);
 		System.out.println(account);
+		System.out.println(accounts);
+		account = restTemplate.getForObject("http://localhost:8080/26-Spring-REST/accounts/5000", Account.class);
+		account.setName("Arnav Rajput");
+		restTemplate.put("http://localhost:8080/26-Spring-REST/accounts/5000", account);
+		accounts = restTemplate.getForObject("http://localhost:8080/26-Spring-REST/all-accounts", List.class);
 		System.out.println(accounts);
 	}
 

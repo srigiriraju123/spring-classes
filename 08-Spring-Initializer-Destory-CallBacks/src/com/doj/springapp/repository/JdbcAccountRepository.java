@@ -8,6 +8,7 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Repository;
 
 import com.doj.springapp.model.Account;
 
@@ -15,7 +16,7 @@ import com.doj.springapp.model.Account;
  * @author Dinesh.Rajput
  *
  */
-//@Repository
+@Repository
 public class JdbcAccountRepository implements AccountRepository, InitializingBean,DisposableBean{
 	
 	@Override
@@ -29,10 +30,20 @@ public class JdbcAccountRepository implements AccountRepository, InitializingBea
 		System.out.println("Creating cache for application");
 	}
 	
+	void initCache(){
+		//TODO =Making network connection
+		System.out.println("Init cache for application");
+	}
+	
 	@PreDestroy//Done by JSR 250
 	void cleanUp(){
 		//TODO =release network connection
 		System.out.println("release cache date from application");
+	}
+	
+	void cleanCache(){
+		//TODO =release network connection
+		System.out.println("cleanCache is called, release cache date from application");
 	}
 
 	@Override

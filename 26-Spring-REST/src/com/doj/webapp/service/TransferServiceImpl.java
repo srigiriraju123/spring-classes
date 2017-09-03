@@ -62,4 +62,13 @@ public class TransferServiceImpl implements TransferService{
 	public Account findById(Long id) {
 		return accountRepository.findOne(id);
 	}
+	@Override
+	public void delete(Long id){
+		accountRepository.delete(id);
+	}
+
+	@Override
+	public void update(Account account) {
+		accountRepository.save(account);
+	}
 }

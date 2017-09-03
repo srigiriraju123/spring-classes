@@ -5,7 +5,6 @@ package com.doj.springapp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 
 import com.doj.springapp.repository.AccountRepository;
 import com.doj.springapp.repository.JdbcAccountRepository;
@@ -24,7 +23,7 @@ public class AppConfig {
 		return new TransferServiceImpl(accountRepository());
 	}
 	@Bean	
-	@Profile("dev")
+	//@Profile("dev")
 	public AccountRepository accountRepository() {
 		return new JdbcAccountRepository();
 	}

@@ -11,12 +11,14 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author Dinesh.Rajput
  *
  */
 @Configuration
+@EnableTransactionManagement
 public class InfrastructureConfig {
  //have infrastructure related beans like DataSource, JNDI, etc. dbcp, c3p0
 	@Bean

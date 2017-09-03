@@ -7,9 +7,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.doj.webapp.model.Account;
@@ -32,7 +35,7 @@ public class AccountController {
 	}
 	
 	@PostMapping("/open-account")
-	public String save (Account account, ModelMap model){
+	public String save (@RequestBody Account account, ModelMap model){
 		account = transferService.open(account);
 		model.put("account", account);
 		return "account";
@@ -42,10 +45,22 @@ public class AccountController {
 	public List<Account>  all (){
 		return transferService.findAllAccounts();
 	}
+	
 	@GetMapping("/accounts/{id}")
 	public Account  one (@PathVariable Long id){
 		return transferService.findById(id);
 	}
+	
+	@DeleteMapping("/accounts/{id}")
+	public void delete(@PathVariable Long id){
+		transferService.delete(id);
+	}
+	
+	@PutMapping("/accounts/{id}")
+	public void update(@RequestBody Account account){
+		transferService.update(account);
+	}
+	
 	@GetMapping("/accounts")
 	public AccountVO  allXML (){
 		AccountVO accountVO = new AccountVO();

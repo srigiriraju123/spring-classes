@@ -55,15 +55,15 @@ public class HelloController {
 		return "hello";
 	}*/
 	
-	/*@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
-	public String sayHello(ModelMap model, User user){
-		model.put("message", user.getName()+" Welcome to DOJ classes!!! " +user.getSurname() +" "+user.getAge());
-		return "hello";
-	}*/
-	
 	@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
 	public String sayHello(ModelMap model, User user){
 		model.put("message", user.getName()+" Welcome to DOJ classes!!! " +user.getSurname() +" "+user.getAge());
 		return "hello";
 	}
+	
+	/*@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
+	public String sayHello(ModelMap model, User user){
+		model.put("message", user.getName()+" Welcome to DOJ classes!!! " +user.getSurname() +" "+user.getAge());
+		return "hello";
+	}*/
 }

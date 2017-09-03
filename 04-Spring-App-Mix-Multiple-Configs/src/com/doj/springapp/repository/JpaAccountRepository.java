@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.doj.springapp.model.Account;
 
-@Repository("accountRepository")
+@Repository//("accountRepository")
 //@Primary
 //@Order(2)
 @Profile("prod")

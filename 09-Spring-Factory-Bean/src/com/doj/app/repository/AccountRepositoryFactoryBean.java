@@ -23,7 +23,7 @@ public class AccountRepositoryFactoryBean implements FactoryBean<IAccountReposit
 
 	@Override
 	public boolean isSingleton() {
-		return false;
+		return true;
 	}
 
 }

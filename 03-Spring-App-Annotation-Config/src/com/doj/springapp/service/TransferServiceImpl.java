@@ -12,7 +12,7 @@ import com.doj.springapp.repository.AccountRepository;
  * @author Dinesh.Rajput
  *
  */
-@Service
+@Service("transferService")
 public class TransferServiceImpl implements TransferService{
 	
 	AccountRepository accountRepository;

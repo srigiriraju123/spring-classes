@@ -30,7 +30,7 @@ public class ServiceCaller {
 		//2. resolved
 		//3. resolved
 		//ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-		System.setProperty("spring.profiles.active", "prod");
+		System.setProperty("spring.profiles.active", "dev");
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 		//We have to downcast-find bean by name
 		//TransferService transferService = (TransferService) applicationContext.getBean("transferService");
