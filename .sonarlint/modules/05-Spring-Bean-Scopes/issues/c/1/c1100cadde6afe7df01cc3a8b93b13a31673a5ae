@@ -1,0 +1,12 @@
+
+}squid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ûˆ‰ßûÿÿÿÿH¸$RMAJORZ
+CODE_SMELL
+}squid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(¼€ÛõùÿÿÿÿHº$RMAJORZ
+CODE_SMELL
+e
+squid:S106 "9Replace this use of System.out or System.err by a logger.(”½îòH¹$RMAJORZ
+CODE_SMELL
+Žsquid:UselessImportCheck"MRemove this unused import 'org.springframework.context.annotation.DependsOn'.(¯òï€8…ÝÄŽ¿,HÅ$RMINORZ
+CODE_SMELL
+‘squid:UselessImportCheck"KRemove this unused import 'org.springframework.context.annotation.Profile'.(ØÝ¥Ýøÿÿÿÿ8Í€ÕŽ¿,HÍ$RMINORZ
+CODE_SMELL

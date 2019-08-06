@@ -34,8 +34,13 @@ public class InfrastructureConfig {
  	    </jdbc:embedded-database>*/
 	}
 	
-	@Bean //implementation
+	@Bean("tx") //implementation
 	public PlatformTransactionManager transactionManager(){
 		return new DataSourceTransactionManager(dataSource());
 	}
+	
+	/*@Bean //implementation
+	public PlatformTransactionManager transactionManager(){
+		return new JtaTransactionManager();
+	}*/
 }

@@ -26,6 +26,9 @@ import com.doj.webapp.service.TransferService;
 @RestController
 public class AccountController {
 	
+	//As of 3.2, @Responsebody + @Controller 
+	//As of 4.0 @RestController =
+	
 	@Autowired
 	TransferService transferService;
 	
@@ -46,8 +49,12 @@ public class AccountController {
 		return transferService.findAllAccounts();
 	}
 	
-	@GetMapping("/accounts/{id}")
+	@GetMapping(value="/accounts/{id}", consumes="application/json", produces="application/json")
 	public Account  one (@PathVariable Long id){
+		return transferService.findById(id);
+	}
+	@GetMapping(value="/accounts/{id}", consumes="application/atom+xml", produces="application/atom+xml")
+	public Account  oneXML (@PathVariable Long id){
 		return transferService.findById(id);
 	}
 	

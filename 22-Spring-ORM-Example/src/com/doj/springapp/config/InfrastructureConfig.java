@@ -19,7 +19,6 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.jta.JtaTransactionManager;
 
 /**
  * @author Dinesh.Rajput
@@ -69,8 +68,8 @@ public class InfrastructureConfig {
 	public PlatformTransactionManager transactionManager(){
 		return new DataSourceTransactionManager(dataSource());
 	}*/
-    @Bean
+   /* @Bean
     public PlatformTransactionManager transactionManager(){
 		return new JtaTransactionManager();
-	}
+	}*/
 }

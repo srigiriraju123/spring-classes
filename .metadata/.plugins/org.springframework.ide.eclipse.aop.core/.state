@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="01-Spring-Hello-Example"/>
 <aop-project name="28-Spring-Boot"/>
+<aop-project name="03-Spring-App-Annotation-Config"/>
 </aop-reference-model>

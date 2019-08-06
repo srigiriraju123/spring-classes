@@ -1,0 +1,5 @@
+
+Xsquid:S1168"+Return an empty collection instead of null.(•πÔçH…&RMAJORZ
+CODE_SMELL
+º%squid:RedundantThrowsDeclarationCheck"vRemove the declaration of thrown exception 'org.springframework.dao.DataAccessException' which is a runtime exception.(ÿ¬ï/H &RMINORZ
+CODE_SMELL

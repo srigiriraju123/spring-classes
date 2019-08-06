@@ -6,9 +6,9 @@ package com.doj.springapp.repository;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.stereotype.Repository;
 
 import com.doj.springapp.model.Account;
 
@@ -16,8 +16,9 @@ import com.doj.springapp.model.Account;
  * @author Dinesh.Rajput
  *
  */
-@Repository
-public class JdbcAccountRepository implements AccountRepository, InitializingBean,DisposableBean{
+//@Repository
+//@Scope("prototype")
+public class JdbcAccountRepository implements AccountRepository, InitializingBean,DisposableBean, BeanNameAware{
 	
 	@Override
 	public Account findAccountById(Long id){
@@ -40,7 +41,7 @@ public class JdbcAccountRepository implements AccountRepository, InitializingBea
 		//TODO =release network connection
 		System.out.println("release cache date from application");
 	}
-	
+
 	void cleanCache(){
 		//TODO =release network connection
 		System.out.println("cleanCache is called, release cache date from application");
@@ -56,5 +57,10 @@ public class JdbcAccountRepository implements AccountRepository, InitializingBea
 		//TODO =release network connection
 		System.out.println("releasse cache date from application by destroy()");
 		
+	}
+
+	@Override
+	public void setBeanName(String name) {
+		System.out.println("Bean Name Aware is called "+name);
 	}
 }

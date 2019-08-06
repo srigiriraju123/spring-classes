@@ -3,14 +3,15 @@
  */
 package com.doj.app.repository;
 
-import org.springframework.stereotype.Repository;
-
 /**
  * @author Manzoor Alam
  *
  */
-@Repository
+//@Repository
 //@Scope("prototype")
 public class AccountRepository implements IAccountRepository{
-
+	
+	//getInsrance(){
+		//logic of java singleton
+	//}
 }

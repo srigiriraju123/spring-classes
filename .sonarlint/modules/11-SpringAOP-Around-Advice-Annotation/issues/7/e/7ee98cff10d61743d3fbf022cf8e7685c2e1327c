@@ -1,0 +1,26 @@
+
+}squid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(ºÚßèøÿÿÿÿH’&RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(‰µëŒH“&RMAJORZ
+CODE_SMELL
+j
+squid:S106 "9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿH”&RMAJORZ
+CODE_SMELL
+l
+squid:S106"9Replace this use of System.out or System.err by a logger.(Áªø8ª€ýõ›,H•&RMAJORZ
+CODE_SMELL
+j
+squid:S106+"9Replace this use of System.out or System.err by a logger.(…„í«øÿÿÿÿH–&RMAJORZ
+CODE_SMELL
+j
+squid:S106."9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿH—&RMAJORZ
+CODE_SMELL
+¶squid:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—îý˜üÿÿÿÿH˜&RCRITICALZ
+CODE_SMELL
+e
+squid:S106-"9Replace this use of System.out or System.err by a logger.(ú®ãH™&RMAJORZ
+CODE_SMELL
+e
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÊŸœ„Hš&RMAJORZ
+CODE_SMELL

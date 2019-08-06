@@ -5,7 +5,6 @@ package com.doj.springapp.client;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.doj.springapp.config.AppConfig;
 import com.doj.springapp.service.TransferService;
@@ -31,8 +30,8 @@ public class ServiceCaller {
 		//1. resolved 
 		//2. resolved
 		//3. resolved
-		//ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+		//ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 		//We have to downcast-find bean by name
 		//TransferService transferService = (TransferService) applicationContext.getBean("transferService");
 		//TransferService transferService = applicationContext.getBean("transferService",TransferService.class);

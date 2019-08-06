@@ -22,10 +22,14 @@ import com.doj.springapp.repository.AppDataSource;
 public class InfrastructureConfig {
  //have infrastructure related beans like DataSource, JNDI, etc.
 	
-	@Value("${dburl}") 		String dburl;
+	/*@Value("${dburl}") 	String dburl;
 	@Value("${user}") 		String user;
 	@Value("${password}") 	String password;
 	@Value("${driver}") 	String driver;
+	*/
+	@Value("#{systemProperties['user.region']}") String abc;
+	
+	//String abc = System.getProperty("user.region");
 	
 	//One way
 	@Autowired
@@ -33,6 +37,7 @@ public class InfrastructureConfig {
 	
 	@Bean
 	public AppDataSource dataSource(){
+		
 		AppDataSource appDataSource = new AppDataSource();
 		appDataSource.setDburl(env.getProperty("dburl"));
 		appDataSource.setDriver(env.getProperty("driver"));
@@ -52,11 +57,11 @@ public class InfrastructureConfig {
 		return appDataSource;
 	}*/
 	
-	@Bean
+	/*@Bean
 	public AppDataSource devDataSource(){
 		AppDataSource appDataSource = new AppDataSource(dburl, user, password, driver);
 		return appDataSource;
-	}
+	}*/
 	
 	//Third Way
 	/*@Bean

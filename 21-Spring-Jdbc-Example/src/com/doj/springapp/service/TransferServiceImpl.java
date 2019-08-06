@@ -6,6 +6,7 @@ package com.doj.springapp.service;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.doj.springapp.model.Account;
@@ -33,13 +34,15 @@ public class TransferServiceImpl implements TransferService{
 	}*/
 	
 	@Override
-	@Transactional(timeout=30,rollbackFor=Exception.class, rollbackForClassName="Exception") //Demarcation
+	//@Transactional
+	@Transactional(timeout=30,rollbackFor=Exception.class, rollbackForClassName="Exception", propagation =Propagation.REQUIRED) //Demarcation
 	public void transfer(Long amount, Long a, Long b){
 		Account accountA = accountRepository.findAccountById(a);//update 1-OK//rollback//connect
 		Account accountB = accountRepository.findAccountById(b);////update 2//rollback//connect//close
 		//transferRepository.tranfer(amount, accountB); ////update 3-Not OK-
 		System.out.println("Amount has been transfered from "+accountA +" to "+accountB);
 		//otherservice.call();
+		System.out.println(accountRepository.findAccountAll());
 	}
 }
 

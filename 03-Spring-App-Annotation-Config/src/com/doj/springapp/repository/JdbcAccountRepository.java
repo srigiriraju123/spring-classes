@@ -9,7 +9,7 @@ import com.doj.springapp.model.Account;
 
 /**
  * @author Dinesh.Rajput
- *
+ *jdbcAccountRepository
  */
 @Repository
 public class JdbcAccountRepository implements AccountRepository{

@@ -1,0 +1,19 @@
+
+j
+squid:S106*"9Replace this use of System.out or System.err by a logger.(¾ÃË¢ÿÿÿÿÿHÓ)RMAJORZ
+CODE_SMELL
+j
+squid:S106)"9Replace this use of System.out or System.err by a logger.(Âé’ùÿÿÿÿHÔ)RMAJORZ
+CODE_SMELL
+xsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(»İßHÕ)RMAJORZ
+CODE_SMELL
+j
+squid:S106/"9Replace this use of System.out or System.err by a logger.(¾ÃË¢ÿÿÿÿÿHÖ)RMAJORZ
+CODE_SMELL
+hsquid:S1854 ";Remove this useless assignment to local variable "account".(ÜùˆüH×)RMAJORZ
+CODE_SMELL
+j
+squid:S106""9Replace this use of System.out or System.err by a logger.(¾ÃË¢ÿÿÿÿÿHØ)RMAJORZ
+CODE_SMELL
+¡squid:S1192!"rDefine a constant instead of duplicating this literal "http://localhost:8080/26-Spring-REST/all-accounts" 3 times.(¹÷ı@HÙ)RCRITICALZ
+CODE_SMELL

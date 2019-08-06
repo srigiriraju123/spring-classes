@@ -6,6 +6,7 @@ package com.doj.app.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 
 import com.doj.app.repository.AccountRepository;
@@ -31,15 +32,16 @@ public class AppConfig {
 	}
 	
 	@Bean
+	@Scope("prototype")
 	public TransferService transferService(){
-		System.out.println("1st call");
+		//System.out.println("1st call");
 		return new TransferService(accountRepository());//1st call
 	}
 	
 	@Bean
-	//@Lazy
+	@Lazy
 	public AccountService accountService(){
-		System.out.println("2nd call");
+		//System.out.println("2nd call");
 		return new AccountService(accountRepository());//2nd call
 	}
 	

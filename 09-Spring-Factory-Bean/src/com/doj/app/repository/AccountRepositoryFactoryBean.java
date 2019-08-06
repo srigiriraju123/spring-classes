@@ -13,6 +13,8 @@ public class AccountRepositoryFactoryBean implements FactoryBean<IAccountReposit
 
 	@Override
 	public IAccountRepository getObject() throws Exception {
+		//add your logic
+		System.out.println("Creating Bean by AccountRepositoryFactoryBean");
 		return new AccountRepository();
 	}
 
@@ -23,6 +25,7 @@ public class AccountRepositoryFactoryBean implements FactoryBean<IAccountReposit
 
 	@Override
 	public boolean isSingleton() {
+		System.out.println("Deciding Scope of Bean by AccountRepositoryFactoryBean");
 		return true;
 	}
 

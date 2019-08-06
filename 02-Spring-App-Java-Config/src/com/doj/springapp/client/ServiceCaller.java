@@ -33,9 +33,10 @@ public class ServiceCaller {
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		//We have to downcast-find bean by name
 		//TransferService transferService = (TransferService) applicationContext.getBean("transferService");
-		TransferService transferService = applicationContext.getBean("transferService",TransferService.class);
+		System.out.println("LAZZZY");
+		//TransferService transferService = applicationContext.getBean("transferService",TransferService.class);
 		//No need to downcast-find bean by type-recommended
-		//TransferService transferService = applicationContext.getBean(TransferService.class);
+		TransferService transferService = applicationContext.getBean(TransferService.class);
 		transferService.transfer(200l, 1l, 2l);
 	}
 

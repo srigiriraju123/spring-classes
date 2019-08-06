@@ -10,6 +10,10 @@
 	 <!-- PropertySourcesPlaceholderConfigurer BFPP working behind--> 
 	<context:property-placeholder location="app-${ENV}.properties"/>
 	
+	<!-- <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+		<property name="location" value="app-${ENV}.properties"></property>
+	</bean> -->
+	
 	<bean id="dataSource" class="com.doj.springapp.repository.AppDataSource">
 		<property name="dburl" value="${dburl}"/>
 		<property name="user" value="${user}"/>

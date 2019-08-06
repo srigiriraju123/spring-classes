@@ -10,7 +10,7 @@ import com.doj.webapp.web.config.SpringMvcConfig;
 
 /**
  * @author Dinesh.Rajput
- * like as web.xml
+ * like as web.xml 
  * AbstractAnnotationConfigDispatcherServletInitializer - internally configured DispatcherServlet
  */
 public class SpringApplicationInitilizer extends AbstractAnnotationConfigDispatcherServletInitializer {

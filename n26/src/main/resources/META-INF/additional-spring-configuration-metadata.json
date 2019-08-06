@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "statisticService.removeExpiredStatisticsInMs",
+    "type": "java.lang.String",
+    "description": "A description for 'statisticService.removeExpiredStatisticsInMs'"
+  },
+  {
+    "name": "statisticService.windowInMs",
+    "type": "java.lang.String",
+    "description": "A description for 'statisticService.windowInMs'"
+  },
+  {
+    "name": "statisticService.windowInMs",
+    "type": "java.lang.String",
+    "description": "A description for 'statisticService.windowInMs'"
+  }
+]}

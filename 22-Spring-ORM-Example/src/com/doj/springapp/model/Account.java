@@ -14,7 +14,7 @@ import javax.persistence.Table;
  * @author Dinesh.Rajput
  *
  */
-@Table
+@Table(name="Account")
 @Entity
 public class Account implements Serializable{
 	/**
@@ -23,6 +23,7 @@ public class Account implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id //PK
 	//@GeneratedValue(strategy=GenerationType.AUTO)//PK//
+	@Column(name="id")
 	Long id;
 	@Column
 	Long balance;

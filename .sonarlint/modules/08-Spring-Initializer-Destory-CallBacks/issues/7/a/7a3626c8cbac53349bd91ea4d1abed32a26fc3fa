@@ -1,0 +1,10 @@
+
+Á%squid:RedundantThrowsDeclarationCheck"sRemove the declaration of thrown exception 'org.springframework.beans.BeansException' which is a runtime exception.(¯¶…œ8–Í®Ïš,H…%RMINORZ
+CODE_SMELL
+Á%squid:RedundantThrowsDeclarationCheck)"sRemove the declaration of thrown exception 'org.springframework.beans.BeansException' which is a runtime exception.(÷Âªö8ž’´Ïš,H†%RMINORZ
+CODE_SMELL
+¸squid:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷Âªö8ž’´Ïš,H‡%RCRITICALZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(å²•îýÿÿÿÿ8í›®Ïš,Hˆ%RMAJORZ
+CODE_SMELL

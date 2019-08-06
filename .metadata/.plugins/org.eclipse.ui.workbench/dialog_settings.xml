@@ -20,7 +20,7 @@
 		<item value="org.eclipse.wst.server.ui.new.server" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.wst.server.ui"/>
-			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 			<item value="org.eclipse.wst.web.ui"/>
 			<item value="org.eclipse.jst.ws.ui.new"/>
 		</list>

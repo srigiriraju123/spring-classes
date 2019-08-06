@@ -17,12 +17,12 @@ import com.doj.app.repository.AccountRepositoryFactoryBean;
 @ComponentScan(basePackages={"com.doj.app.service"})
 public class AppConfig {
 	
-	/*@Bean
+	/*@Bean  ///ar
 	public IAccountRepository accountRepository(){
 		return new AccountRepository();
-	}
-	*/
-	@Bean
+	}*/
+	
+	@Bean //ar
 	public AccountRepositoryFactoryBean accountRepository(){
 		return new AccountRepositoryFactoryBean();
 	}

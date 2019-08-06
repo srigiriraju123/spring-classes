@@ -8,6 +8,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 /**
  * @author Dinesh.Rajput
@@ -22,8 +23,12 @@ public class Account implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id//Pk
 	Long id;
+	
 	Long balance;
+	
+	@Size(max=12, min=3)
 	String name;
+	
 	public Long getId() {
 		return id;
 	}

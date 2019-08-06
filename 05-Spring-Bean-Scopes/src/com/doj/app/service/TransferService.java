@@ -3,8 +3,7 @@
  */
 package com.doj.app.service;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.doj.app.repository.IAccountRepository;
 
@@ -12,10 +11,10 @@ import com.doj.app.repository.IAccountRepository;
  * @author Manzoor Alam
  *
  */
-@Service
+//@Service
 //@Scope("prototype")
 public class TransferService {
-	//@Autowired
+	@Autowired(required=false)
 	IAccountRepository accountRepository;
 	
 	public TransferService(IAccountRepository accountRepository){

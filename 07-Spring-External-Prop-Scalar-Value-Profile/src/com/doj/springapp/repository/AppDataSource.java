@@ -3,16 +3,24 @@
  */
 package com.doj.springapp.repository;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  * @author Dinesh.Rajput
  *
  */
+@Component
 public class AppDataSource {
 	
-	String dburl;
-	String user;
-	String password;
-	String driver;
+	@Value("${dburl}") 		String dburl;
+	@Value("${user}") 		String user;
+	@Value("${password}") 	String password;
+	@Value("${driver}") 	String driver;
+	
 	public String getDburl() {
 		return dburl;
 	}
@@ -53,4 +61,5 @@ public class AppDataSource {
 		return "AppDataSource [dburl=" + dburl + ", user=" + user + ", password=" + password + ", driver=" + driver
 				+ "]";
 	}
+	
 }

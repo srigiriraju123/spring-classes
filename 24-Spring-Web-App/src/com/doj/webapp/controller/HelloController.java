@@ -18,11 +18,12 @@ import com.doj.webapp.dto.User;
 //@RequestMapping("/doj")
 public class HelloController {
 	
-	/*@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
+	//@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
+	/*@GetMapping(value={"/hello", "/"})
 	public ModelAndView sayHello(){
 		Map<String, String> model = new HashMap<>();
 		model.put("message", "Welcome to DOJ classes!!!");
-		return new ModelAndView("hello", "model", model);
+		return new ModelAndView("hello",model);
 	}*/
 	
 	/*@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
@@ -30,11 +31,10 @@ public class HelloController {
 		model.put("message", "Welcome to DOJ classes!!!");
 		return "hello";
 	}*/
-	
 	/*@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
 	public String sayHello(ModelMap model, HttpServletRequest request){
 		String name = request.getParameter("name"); //Traditional Way
-		String surname = request.getParameter("surname");
+		String surname = request.getParameter("surname");	
 		String age = request.getParameter("age");
 		model.put("message", name+" Welcome to DOJ classes!!! " +surname);
 		return "hello";
@@ -44,7 +44,7 @@ public class HelloController {
 	public String sayHello(ModelMap model, 
 			@RequestParam(required = false, name="nm", defaultValue = "Dinesh") String name, 
 			@RequestParam String surname,
-			@RequestParam int age){
+			@RequestParam(required=false, defaultValue = "18") Integer age){
 		model.put("message", name+" Welcome to DOJ classes!!! " +surname +" "+age);
 		return "hello";
 	}*/
@@ -53,17 +53,13 @@ public class HelloController {
 	public String sayHello(ModelMap model, @PathVariable String name, @PathVariable String surname){
 		model.put("message", name+" Welcome to DOJ classes!!! "+surname);
 		return "hello";
-	}*/
-	
+	}
+	*/
 	@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
 	public String sayHello(ModelMap model, User user){
 		model.put("message", user.getName()+" Welcome to DOJ classes!!! " +user.getSurname() +" "+user.getAge());
 		return "hello";
 	}
 	
-	/*@RequestMapping(value = {"/hello", "/"}, method=RequestMethod.GET)
-	public String sayHello(ModelMap model, User user){
-		model.put("message", user.getName()+" Welcome to DOJ classes!!! " +user.getSurname() +" "+user.getAge());
-		return "hello";
-	}*/
+	
 }

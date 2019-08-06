@@ -4,9 +4,11 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
  	<context:component-scan base-package="com.doj.springapp.config"/> 
@@ -15,11 +17,20 @@
  	<import resource="app2.xml"/> -->
  	
  	<!-- <bean class="com.doj.springapp.config.AppConfig"/> -->
- 	<jdbc:embedded-database id="dataSouurce" type="H2">
+ 	<jdbc:embedded-database id="dataSouurce" type="HSQL">
  		<jdbc:script location="schema.sql"/>
  		<jdbc:script location="data.sql"/>
  	</jdbc:embedded-database>
  	
- 	<tx:annotation-driven/>
+ 	<!-- <tx:annotation-driven/> -->
+ 	<!-- 
+ 	<tx:advice id="txn">
+ 		<tx:attributes>
+ 			<tx:method name="trannsfer" propagation="REQUIRED" isolation="DEFAULT"  no-rollback-for="" read-only="false" timeout="-1" rollback-for=""/>
+ 		</tx:attributes>
+ 	</tx:advice>
+ 	<aop:config>
+ 		<aop:advisor advice-ref="txn" pointcut="execution(com.doj.service.*.*())" />
+ 	</aop:config> -->
  	
 </beans>

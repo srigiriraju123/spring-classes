@@ -3,10 +3,8 @@
  */
 package com.doj.springapp.service;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
 
 import com.doj.springapp.model.Account;
@@ -17,8 +15,8 @@ import com.doj.springapp.repository.AccountRepository;
  *
  */
 @Service
-public class TransferServiceImpl implements TransferService, ApplicationContextAware, BeanNameAware{
-	
+public class TransferServiceImpl implements TransferService/*, ApplicationContextAware, BeanNameAware*/{
+	@Autowired(required = false)
 	AccountRepository accountRepository;
 	
 	ApplicationContext applicationContext;
@@ -36,7 +34,7 @@ public class TransferServiceImpl implements TransferService, ApplicationContextA
 		System.out.println("Amount has been transfered from "+accountA +" to "+accountB);
 	}
 
-	@Override
+	/*@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		this.applicationContext = applicationContext;
 	}
@@ -44,5 +42,5 @@ public class TransferServiceImpl implements TransferService, ApplicationContextA
 	@Override
 	public void setBeanName(String name) {
 		System.out.println(name);
-	}
+	}*/
 }

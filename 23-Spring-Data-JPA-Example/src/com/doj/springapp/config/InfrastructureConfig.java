@@ -52,7 +52,7 @@ public class InfrastructureConfig {
 	@Bean
 	public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
 		return new JpaTransactionManager(emf);
-}
+	}
 	
 	/*@Bean //implementation
 	public PlatformTransactionManager transactionManager(){
