@@ -4,7 +4,7 @@
   <artifactId>08-Spring-Initializer-Destory</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
-  	<spring.version>4.3.5.RELEASE</spring.version>
+  	<spring.version>5.3.19</spring.version>
   </properties>
 
 	<dependencies>
